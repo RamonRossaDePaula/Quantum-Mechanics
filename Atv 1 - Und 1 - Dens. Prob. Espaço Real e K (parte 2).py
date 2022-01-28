@@ -1,5 +1,25 @@
+
+# Disciplina: Mecânica Quântica (FIS01210)
+# Aluno: Ramon Rossa de Paula (00243967)
+
+# "Este trabalho foi produzido em Python, utilizando a IDE Visual Studio Code, exclusivamente por mim. Nenhuma parte deste trabalho (texto e fórmulas) foi copiada digitalmente de outras fontes"
+
+
+
+
+
 # ____________________________________________________________________________________
 
+# Importações
+
+import math
+import numpy as np
+from numpy import loadtxt
+import matplotlib.pyplot as plt
+from scipy import integrate
+from numpy import sqrt, exp, log, pi, abs
+
+# ____________________________________________________________________________________
 
 # Atividade 2 - O mesmo para psi complexo
 
