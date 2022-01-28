@@ -1,29 +1,3 @@
-import math
-import numpy as np
-from numpy import loadtxt
-import matplotlib.pyplot as plt
-from scipy import integrate
-
-# ____________________________________________________________________________________
-
-# Atividade 1 - Função densidade de probabilidade
-
-def psi0(x):
-    return (2*np.pi)**-0.25*np.exp(-2*np.abs(x-1))/np.sqrt(0.399)/np.sqrt(0.5)
-x = np.arange(-5,5,0.1)
-plt.plot(x,psi0(x)**2)
-plt.title('Densidade de Probabilidade')
-plt.xlabel('x')
-plt.ylabel('$|\Psi(x)|^2$')
-
-area,err = integrate.quad(lambda x :psi0(x)**2,-np.inf,np.inf)
-xmean,err = integrate.quad(lambda x :x*psi0(x)**2,-np.inf,np.inf)
-x2mean,err = integrate.quad(lambda x :x**2*psi0(x)**2,-np.inf,np.inf)
-
-print ('area = {:.3f}'.format(area))
-print ('média = {:.3f}'.format(xmean))
-print ('desvio padrão = {:.3f}'.format(math.sqrt(x2mean-xmean**2)))
-
 # ____________________________________________________________________________________
 
 
