@@ -6,6 +6,7 @@ import numpy as np
 from numpy import loadtxt
 import matplotlib.pyplot as plt
 from scipy import integrate
+from numpy import sqrt, exp, log, pi, abs
 
 # ____________________________________________________________________________________
 
@@ -14,13 +15,13 @@ from scipy import integrate
 
     # Função Ψ(x):
 
-def psi0(x):                                                                                        
-    return (np.exp ** x)
-
+def psi0(x):                                                                                     
+    return (sqrt(0.02*log(12))/pi)*5*exp(-0.02*log(12)*(x-2.311)**2) + 0.0527
+    
 
      # Código para o gráfico:
 
-x = np.arange(-5,5,0.1)
+x = np.arange(-8,11,0.1)
 plt.plot(x,psi0(x)**2)
 plt.title('Densidade de Probabilidade')
 plt.xlabel('x')
