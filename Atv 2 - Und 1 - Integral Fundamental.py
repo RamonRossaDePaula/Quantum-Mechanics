@@ -35,9 +35,6 @@ plt.title("Área")
 plt.xlabel('α')
 plt.ylabel('fe(α)')
 plt.grid()
-plt.legend(['ε = 0.1', 'ε = 0.5', 'ε = 1', 
-            'ε = 1.5', 'ε = 2', 'ε = 5', 
-            'ε = 10', 'ε = 20', 'ε = 50', 'ε = 100', ], loc=1)
 
 plt.plot(a, fe(a, 0.1))   # Largura proporcional a ε e altura proporcional a 1/ε.
 plt.plot(a, fe(a, 0.5))
@@ -50,6 +47,8 @@ plt.plot(a, fe(a, 20))
 plt.plot(a, fe(a, 50))
 plt.plot(a, fe(a, 100))
 
+plt.legend(['ε = 0.1', 'ε = 0.5', 'ε = 1', 'ε = 1.5', 
+            'ε = 2', 'ε = 5', 'ε = 10',
+            'ε = 20', 'ε = 50', 'ε = 100',], loc=1)
+
 plt.show()
-
-
